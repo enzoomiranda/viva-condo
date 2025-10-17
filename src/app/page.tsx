@@ -55,6 +55,7 @@ export default function Login() {
   }
 
   return (
+
     <div className="flex h-screen flex-col md:flex-row">
       <div className="w-full flex items-center justify-center p-6">
         <div className="w-full max-w-md bg-white p-8 shadow-lg rounded-lg">
