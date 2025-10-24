@@ -19,6 +19,7 @@ export default function Login() {
       const { data: { session } } = await supabase.auth.getSession()
       if (session?.user) {
         router.replace("/condominios")
+        router.refresh()
       } else {
         setCheckingSession(false)
       }
@@ -41,6 +42,7 @@ export default function Login() {
       }
 
       router.replace("/condominios")
+      router.refresh()
     } catch (err) {
       setErrorMessage("Erro inesperado. Tente novamente.")
       setIsLoading(false)
